@@ -29,7 +29,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import mesosphere.marathon.client.model.v2.App;
 import mesosphere.marathon.client.MarathonClient;
-import mesosphere.marathon.client.utils.MarathonException;
+import mesosphere.marathon.client.MarathonException;
 import com.google.gson.Gson;
 
 import java.io.IOException;
