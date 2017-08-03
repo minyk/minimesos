@@ -10,7 +10,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.bmuschko:gradle-docker-plugin:3.0.2'
+        classpath 'com.bmuschko:gradle-docker-plugin:3.0.11'
         classpath "de.gesellix:gradle-debian-plugin:16"
     }
 }
@@ -83,8 +83,9 @@ subprojects {
 }
 
 ext {
-    mesosVer    = "1.0.0"
-    repository  = 'containersol'
+    mesosVer    = "1.2.1"
+    mesosVer    = "1.2.1"
+    repository  = 'minyk'
 }
 
 idea {
@@ -146,7 +147,7 @@ task releaseMinimesosCliImage << {
         }
     }
 
-    def minimesosCliImage = "containersol/minimesos-cli"
+    def minimesosCliImage = "minyk/minimesos-cli"
 
     def command = "docker tag \$(docker images ${minimesosCliImage} | grep 'latest' | awk '{print \$3}') ${minimesosCliImage}:${project.version}"
     // executing via bash, so we can make use of its interpreter of the parameters. Otherwise pipes do not work
